@@ -1,38 +1,18 @@
-import { useState } from "react"
+import Link from "next/link"
+import Gerador from "../components/Gerador"
+
 
 function Home() {
     return (
         <div>
+            <Link href="/sobre">
+                Sobre
+            </Link>
             <h1>Home</h1>
-            <Contador />
-            <a href="/sobre">Sobre</a>
+            <Gerador />
         </div>
     )
 }
 
-function Contador() {
-    const [contador, setContador] = useState(1)
-
-    function adicionarContador() {
-        setContador(contador + 1)
-    }
-
-    function removerContador() {
-        setContador(contador - 1)
-    }
-
-    function zerarContador() {
-        setContador(0)
-    }
-
-    return (
-        <div>
-            <div>{contador}</div>
-            <button onClick={adicionarContador}>Adicionar</button>
-            <button onClick={removerContador}>Remover</button>
-            <button onClick={zerarContador}>Zerar</button>
-        </div>
-    )
-}
 
 export default Home
