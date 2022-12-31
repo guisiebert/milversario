@@ -1,8 +1,10 @@
-function tempo(request, response) {
+async function tempo(req, res) {
     const dynamicDate = new Date();
 
-    response.json({
-        date: dynamicDate.toGMTString()
+    const subscribersResponse = await fetch("")
+
+    res.json({
+        date: dynamicDate
     })
 }
 
